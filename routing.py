@@ -2,7 +2,7 @@
 from arrRes import dataRequests
 from flask import Flask,request
 from flask_json import FlaskJSON, JsonError, json_response, as_json
-app=Flask("example")
+app=Flask(__name__)
 FlaskJSON(app)
 @app.route("/<int:length>")
 def lengthData(length):
